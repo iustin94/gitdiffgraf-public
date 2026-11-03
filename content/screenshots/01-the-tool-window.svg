@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="sans-serif">
+  <rect width="1200" height="700" fill="#1d2027"/>
+  <rect x="0" y="0" width="1200" height="44" fill="#2d313a"/>
+  <text x="20" y="29" fill="#e8e6e1" font-size="18">Diff Graph</text>
+  <g stroke="#6b7280" stroke-width="3" fill="none">
+    <path d="M300 200 L560 340"/><path d="M300 480 L560 340"/><path d="M640 340 L880 220"/><path d="M640 340 L880 460" stroke="#d1434b" stroke-dasharray="10 8"/>
+  </g>
+  <g font-size="22" text-anchor="middle">
+    <rect x="200" y="160" width="200" height="80" rx="12" fill="#2f9e5b"/><text x="300" y="208" fill="#fff">OrderService</text>
+    <rect x="200" y="440" width="200" height="80" rx="12" fill="#d9931c"/><text x="300" y="488" fill="#fff">Invoice</text>
+    <rect x="500" y="300" width="200" height="80" rx="12" fill="#d9931c"/><text x="600" y="348" fill="#fff">Ledger</text>
+    <rect x="820" y="180" width="200" height="80" rx="12" fill="#4b5563"/><text x="920" y="228" fill="#fff">Money</text>
+    <rect x="820" y="420" width="200" height="80" rx="12" fill="#d1434b"/><text x="920" y="468" fill="#fff">LegacyTax</text>
+  </g>
+  <text x="600" y="660" fill="#a3a7b2" font-size="20" text-anchor="middle">placeholder — replace with a real screenshot</text>
+</svg>

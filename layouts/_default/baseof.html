@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description | default site.Params.tagline }}">
+  <meta name="color-scheme" content="light dark">
+  {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <img src="{{ "favicon.svg" | relURL }}" alt="" width="28" height="28">
+      <span>{{ site.Title }}</span>
+    </a>
+    <nav>
+      <a href="{{ "/#screenshots" | relURL }}">Screenshots</a>
+      <a href="{{ "/#install" | relURL }}">Install</a>
+      <a href="{{ "/changelog/" | relURL }}">Changelog</a>
+      <a href="{{ "/eula/" | relURL }}">EULA</a>
+      <a class="button" href="{{ site.Params.marketplaceUrl }}">Get it on Marketplace</a>
+    </nav>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <span>© {{ now.Year }} <a href="{{ site.Params.vendorUrl }}">{{ site.Params.vendor }}</a></span>
+    <span><a href="{{ site.Params.issuesUrl }}">Issues</a></span>
+    <span><a href="{{ site.Params.releasesUrl }}">Releases</a></span>
+    <span><a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a></span>
+    <span><a href="{{ "/eula/" | relURL }}">EULA</a></span>
+  </footer>
+</body>
+</html>

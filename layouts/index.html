@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ $shots := (.Resources.Match "screenshots/*").ByType "image" }}
+{{ $hero := index $shots 0 }}
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>{{ .Title }}</h1>
+    <p class="tagline">{{ site.Params.tagline }}</p>
+    <div class="prose">{{ .Content }}</div>
+    <p class="actions">
+      <a class="button" href="{{ site.Params.marketplaceUrl }}">Get it on JetBrains Marketplace</a>
+      <a class="button secondary" href="#screenshots">See it</a>
+    </p>
+  </div>
+  {{ with $hero }}
+  <a class="hero-shot" href="#screenshots">
+    <img src="{{ .RelPermalink }}" alt="{{ partial "caption.html" . }}" loading="eager">
+  </a>
+  {{ end }}
+</section>
+
+<section class="features">
+  {{ range .Params.features }}
+  <article>
+    <h2>{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </article>
+  {{ end }}
+</section>
+
+<section id="screenshots" class="gallery">
+  <h2>Screenshots</h2>
+  {{ if $shots }}
+  <div class="grid">
+    {{ range $shots }}
+    {{ $caption := partial "caption.html" . }}
+    <figure>
+      <a href="{{ .RelPermalink }}"><img src="{{ .RelPermalink }}" alt="{{ $caption }}" loading="lazy"></a>
+      <figcaption>{{ $caption }}</figcaption>
+    </figure>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p class="empty">Screenshots go in <code>content/screenshots/</code>; every image there is shown here, in file-name order, with its name as the caption.</p>
+  {{ end }}
+</section>
+
+<section id="install" class="install prose">
+  <h2>Install</h2>
+  <ol>
+    <li>Rider 2026.2 or later, with the .NET 10 SDK on the <code>PATH</code> Rider loads from your shell.</li>
+    <li>Settings → Plugins → Marketplace → <strong>Diff Graph</strong> → Install, or install the zip from <a href="{{ site.Params.releasesUrl }}">a release</a> through ⚙ → Install Plugin from Disk.</li>
+    <li>Open the tool window: View → Tool Windows → Diff Graph, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>.</li>
+  </ol>
+  <h2>How it works</h2>
+  <p>Each side of the change is checked out into a temporary worktree, the solution is restored and loaded by Roslyn, and a symbol graph is built per side: the types in the repository and the dependencies between them. The two graphs are compared and the difference is drawn. A side's graph is cached by content, so an unchanged working tree is read from the cache. Only the projects holding changed files are compiled.</p>
+  <h2>Limits</h2>
+  <ul>
+    <li>C# only. Other changed files are listed with their hunks but have no node.</li>
+    <li>A dependency Roslyn cannot resolve (a package that did not restore, generated code not on disk) is missing from the graph.</li>
+    <li>Both sides must load: a commit that does not restore gives no graph.</li>
+  </ul>
+</section>
+{{ end }}

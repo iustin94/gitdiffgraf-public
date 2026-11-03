@@ -1,0 +1,17 @@
+baseURL = "https://iustin94.github.io/gitdiffgraf-public/"
+title = "Diff Graph for Rider"
+languageCode = "en"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "rss"]
+
+[params]
+  tagline = "Your uncommitted change, drawn as the graph of the C# types it touches."
+  marketplaceUrl = "https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph"
+  releasesUrl = "https://github.com/iustin94/gitdiffgraf-public/releases"
+  issuesUrl = "https://github.com/iustin94/gitdiffgraf-public/issues"
+  vendor = "esio"
+  vendorUrl = "https://esio.dk"
+  contactEmail = "io@esio.dk"
+
+[markup.goldmark.renderer]
+  unsafe = true
