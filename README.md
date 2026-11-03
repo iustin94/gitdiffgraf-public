@@ -10,7 +10,7 @@ to [Issues](https://github.com/iustin94/gitdiffgraf-public/issues).
 A Hugo site with no theme: `layouts/` holds the three templates, `assets/css/site.css` the styling.
 
 ```sh
-hugo server          # http://localhost:1313/gitdiffgraf-public/
+hugo server          # http://localhost:1313/
 hugo --minify        # ./public
 ```
 
@@ -23,5 +23,5 @@ hugo --minify        # ./public
 | EULA, changelog | `content/eula.md`, `content/changelog.md` |
 
 `.github/workflows/hugo.yml` builds and deploys to GitHub Pages on every push to `main` (Settings → Pages → Source:
-GitHub Actions). The `baseURL` in `hugo.toml` is the Pages URL; set a custom domain there and in Settings → Pages
-when one exists.
+GitHub Actions). The site lives at `https://gitdiffgraph.olaru.dk/` (Settings → Pages → custom domain), which is also
+the `baseURL` in `hugo.toml`; the workflow takes the URL from Pages, so the two must agree.

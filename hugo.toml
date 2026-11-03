@@ -1,4 +1,4 @@
-baseURL = "https://iustin94.github.io/gitdiffgraf-public/"
+baseURL = "https://gitdiffgraph.olaru.dk/"
 title = "Diff Graph for Rider"
 locale = "en"
 enableRobotsTXT = true
