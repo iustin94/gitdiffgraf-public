@@ -22,6 +22,6 @@ hugo --minify        # ./public
 | Install steps, how it works, limits | `layouts/index.html` |
 | EULA, changelog | `content/eula.md`, `content/changelog.md` |
 
-`.github/workflows/pages.yml` builds and deploys to GitHub Pages on every push to `main` (Settings → Pages → Source:
+`.github/workflows/hugo.yml` builds and deploys to GitHub Pages on every push to `main` (Settings → Pages → Source:
 GitHub Actions). The `baseURL` in `hugo.toml` is the Pages URL; set a custom domain there and in Settings → Pages
 when one exists.
