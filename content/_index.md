@@ -8,7 +8,7 @@ features:
   - title: "Rider's own diff, one click away"
     text: "Clicking a changed type opens Rider's diff of its files, the same diff the Commit view shows. Selecting files in the Commit view highlights them in the graph."
   - title: "Stage and unstage from the graph"
-    text: "Move a type, or the lines of one dependency, between the working tree and the index without leaving the graph. Staged-only limits the graph and the diff to what is staged."
+    text: "Move a type, or the lines of one dependency, between the working tree and the index without leaving the graph. Every node and edge wears its stage: staged, partly staged, unstaged."
   - title: "Runs locally, uploads nothing"
     text: "The analyser is bundled with the plugin and runs on your machine with the .NET SDK you already have. Nothing leaves it."
 ---
