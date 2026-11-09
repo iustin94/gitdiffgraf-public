@@ -28,6 +28,10 @@ disableKinds = ["taxonomy", "term", "rss"]
   [params.page]
     width = "wide"
 
+  [params.theme]
+    default = "light"
+    displayToggle = true
+
 [[menu.main]]
   name = "Docs"
   pageRef = "/docs"
