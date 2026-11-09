@@ -22,8 +22,12 @@ layout: hextra-home
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="hx:mb-6 hx:flex hx:flex-wrap hx:gap-3">
-{{< hextra/hero-button text="Get it on JetBrains Marketplace" link="https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph" >}}
+<div class="hx:mb-6 hx:flex hx:flex-wrap hx:items-center hx:gap-3">
+<div id="marketplace-install"></div>
+<script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+<script>
+  MarketplaceWidget.setupMarketplaceWidget('install', 35771, "#marketplace-install");
+</script>
 {{< hextra/hero-button text="Getting started" link="/docs/getting-started" style="background: transparent; color: inherit; border: 1px solid currentColor;" >}}
 </div>
 
