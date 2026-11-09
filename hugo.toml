@@ -1,17 +1,65 @@
 baseURL = "https://gitdiffgraph.olaru.dk/"
 title = "Diff Graph for Rider"
 locale = "en"
+theme = "hextra"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "rss"]
 
 [params]
-  tagline = "Your uncommitted change, drawn as the graph of the C# types it touches."
+  description = "Your uncommitted change, drawn as the graph of the C# types it touches."
   marketplaceUrl = "https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph"
   releasesUrl = "https://github.com/iustin94/gitdiffgraf-public/releases"
   issuesUrl = "https://github.com/iustin94/gitdiffgraf-public/issues"
+  newIssueUrl = "https://github.com/iustin94/gitdiffgraf-public/issues/new"
   vendor = "esio"
   vendorUrl = "https://esio.dk"
   contactEmail = "io@esio.dk"
+
+  [params.navbar]
+    displayTitle = true
+    displayLogo = true
+    [params.navbar.logo]
+      path = "favicon.svg"
+
+  [params.footer]
+    displayCopyright = true
+    displayPoweredBy = false
+
+  [params.page]
+    width = "wide"
+
+[[menu.main]]
+  name = "Docs"
+  pageRef = "/docs"
+  weight = 1
+
+[[menu.main]]
+  name = "Changelog"
+  pageRef = "/changelog"
+  weight = 2
+
+[[menu.main]]
+  name = "EULA"
+  pageRef = "/eula"
+  weight = 3
+
+[[menu.main]]
+  name = "Issues"
+  url = "https://github.com/iustin94/gitdiffgraf-public/issues"
+  weight = 4
+
+[[menu.main]]
+  name = "Search"
+  weight = 5
+  [menu.main.params]
+    type = "search"
+
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/iustin94/gitdiffgraf-public"
+  weight = 6
+  [menu.main.params]
+    icon = "github"
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -1,4 +1,0 @@
-{{- $name := path.BaseName .Name -}}
-{{- $name = replaceRE `^\d+[-_ ]*` "" $name -}}
-{{- $name = replaceRE `[-_]+` " " $name -}}
-{{- $name | humanize -}}

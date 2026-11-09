@@ -7,7 +7,8 @@ to [Issues](https://github.com/iustin94/gitdiffgraf-public/issues).
 
 ## Site
 
-A Hugo site with no theme: `layouts/` holds the three templates, `assets/css/site.css` the styling.
+A Hugo site on the [Hextra](https://imfing.github.io/hextra/) theme, a git submodule under `themes/hextra` pinned to
+v0.13.0. Clone with `--recurse-submodules`, or run `git submodule update --init` after cloning.
 
 ```sh
 hugo server          # http://localhost:1313/
@@ -16,11 +17,14 @@ hugo --minify        # ./public
 
 | To change | Edit |
 |---|---|
-| Tagline, Marketplace / releases / issues links, vendor | `hugo.toml` `[params]` |
-| Intro paragraph and the feature cards | `content/_index.md` |
-| Screenshots | drop images into `content/screenshots/`; shown in file-name order, the name becomes the caption (`02-stage-from-the-graph.png` → "Stage from the graph"); the first one is also the hero image |
-| Getting started, how it works, limits | `layouts/index.html` |
+| Navbar (Docs, Changelog, EULA, Issues, GitHub), Marketplace / releases / issues links | `hugo.toml` `[menu.main]`, `[params]` |
+| Footer line (copyright, issue and release links) | `i18n/en.yaml` `copyright` |
+| Hero, feature cards, the issue callout | `content/_index.md` |
+| Screenshots | `static/images/screenshots/`, referenced by `content/_index.md` and `content/docs/how-it-works.md` |
+| Getting started | `content/docs/getting-started.md` |
+| How it works, limits | `content/docs/how-it-works.md` |
 | EULA, changelog | `content/eula.md`, `content/changelog.md` |
+| Theme version | `git -C themes/hextra checkout <tag>`, then commit the submodule |
 
 `.github/workflows/hugo.yml` builds and deploys to GitHub Pages on every push to `main` (Settings → Pages → Source:
 GitHub Actions). The site lives at `https://gitdiffgraph.olaru.dk/` (Settings → Pages → custom domain), which is also
