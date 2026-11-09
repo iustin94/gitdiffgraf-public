@@ -19,7 +19,7 @@ hugo --minify        # ./public
 | Tagline, Marketplace / releases / issues links, vendor | `hugo.toml` `[params]` |
 | Intro paragraph and the feature cards | `content/_index.md` |
 | Screenshots | drop images into `content/screenshots/`; shown in file-name order, the name becomes the caption (`02-stage-from-the-graph.png` → "Stage from the graph"); the first one is also the hero image |
-| Install steps, how it works, limits | `layouts/index.html` |
+| Getting started, how it works, limits | `layouts/index.html` |
 | EULA, changelog | `content/eula.md`, `content/changelog.md` |
 
 `.github/workflows/hugo.yml` builds and deploys to GitHub Pages on every push to `main` (Settings → Pages → Source:
