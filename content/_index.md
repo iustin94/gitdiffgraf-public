@@ -22,7 +22,7 @@ layout: hextra-home
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="hx:mb-6 hx:flex hx:flex-wrap hx:items-center hx:gap-3">
+<div class="hx:mb-6" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
 <div id="marketplace-install"></div>
 <script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
 <script>
