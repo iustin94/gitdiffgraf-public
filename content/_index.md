@@ -76,6 +76,46 @@ layout: hextra-home
   >}}
 {{< /hextra/feature-grid >}}
 
+<div class="hx:mt-16" id="features">
+
+## Features
+
+**The graph**
+
+- One node per C# type the change touches: class, record, struct, interface, enum, delegate.
+- Node colour shows status: added (green), removed (red), modified (amber), unchanged neighbour (grey).
+- One edge per dependency, read by Roslyn: `inherits`, `implements`, `holds`, `signature`, `creates`, `calls`, `uses`.
+- Edges show whether the change added, removed or kept them.
+- Left-to-right layout: the types that depend on nothing else in the change sit at the left.
+- Each project is drawn as a box around its types.
+
+**Reviewing**
+
+- Click a type to open Rider's diff of its files, the same diff the Commit view shows.
+- Click a dependency to see the changed lines that create it. Its two types are highlighted.
+- Select files in the Commit view to highlight their types in the graph.
+- Hover a type for its namespace, status, files and stage; hover an edge for its kinds, status and stage.
+
+**Staging**
+
+- Right-click a type or a dependency → **Stage** / **Unstage**.
+- Stage badges on every node and edge: staged, partly staged, unstaged.
+
+**Filtering and navigation**
+
+- Find a type by name.
+- Hide test projects, hide unchanged neighbours, show changed edges only.
+- Pick which edge kinds to draw.
+- Pan, zoom and drag nodes. Positions are kept across reloads; **re-layout** and **fit** reset the view.
+
+**In Rider**
+
+- The **Diff Graph** tool window, opened with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>.
+- Updates by itself as files change; **Refresh** restarts the analysis.
+- Runs locally with the bundled analyser and your .NET 10 SDK. Nothing is uploaded.
+
+</div>
+
 <div class="hx:mt-16 hx:mb-8">
 {{< callout type="info" >}}
   **Found a bug or have an idea?** [Open an issue on GitHub](https://github.com/iustin94/gitdiffgraf-public/issues/new): bug reports, suggestions and feature requests all go there. You can also browse [the open issues](https://github.com/iustin94/gitdiffgraf-public/issues) to see what's already planned.

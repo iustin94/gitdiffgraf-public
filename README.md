@@ -19,7 +19,8 @@ hugo --minify        # ./public
 |---|---|
 | Navbar (Docs, Changelog, EULA, Issues, GitHub), Marketplace / releases / issues links | `hugo.toml` `[menu.main]`, `[params]` |
 | Footer line (copyright, issue and release links) | `i18n/en.yaml` `copyright` |
-| Hero, feature cards, the issue callout | `content/_index.md` |
+| Hero, feature cards, the Features list, the issue callout | `content/_index.md` |
+| Styling of the Features list | `assets/css/custom.css` (Hextra loads it after its own CSS) |
 | Screenshots | `static/images/screenshots/`, referenced by `content/_index.md` and `content/docs/how-it-works.md` |
 | Getting started | `content/docs/getting-started.md` |
 | How it works, limits | `content/docs/how-it-works.md` |
