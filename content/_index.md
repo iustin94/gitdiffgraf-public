@@ -3,6 +3,10 @@ title: "Diff Graph for Rider"
 layout: hextra-home
 ---
 
+<div class="hero-video">
+  <video src="videos/gitdiffgraph-in-use.mp4" poster="videos/gitdiffgraph-in-use-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The graph in use: select a type, open its diff, follow a dependency, search"></video>
+</div>
+
 {{< hextra/hero-badge link="https://github.com/iustin94/gitdiffgraf-public/issues" >}}
   <span>Ideas and bug reports welcome on GitHub</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
@@ -10,19 +14,19 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  Review a change by its structure,&nbsp;<br class="hx:sm:block hx:hidden" />not line by line
+  A visualization tool for&nbsp;<br class="hx:sm:block hx:hidden" />C# code changes
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  AI-assisted workflows produce more code than anyone can comfortably read as a list of files. A git diff shows what
-  changed; it does not show how the changes depend on each other. The Diff Graph tool window draws your uncommitted C#
-  change as the graph of the types it touches, so you see the shape of a change before you read it.
+  GitDiffGraph is a Rider plugin that works alongside the Git diff. The diff shows a change line by line. The graph
+  shows how those lines relate: which types changed, in what order they build on each other, and how they connect
+  across projects.
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="hx:mb-6" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
+<div class="hx:mb-12" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem;">
 <div id="marketplace-install"></div>
 <script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
 <script>
@@ -31,94 +35,175 @@ layout: hextra-home
 {{< hextra/hero-button text="Getting started" link="/docs/getting-started" style="background: transparent; color: inherit; border: 1px solid currentColor;" >}}
 </div>
 
-<div class="hx:mt-10 hx:mb-12">
-  <img src="images/screenshots/01-the-change-as-a-graph.png" alt="The change as a graph" class="hx:rounded-xl hx:border hx:border-gray-200 hx:dark:border-neutral-800 hx:shadow-lg" />
+<div class="home-section">
+
+## Use it to review
+
 </div>
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
-    title="The change as a graph"
-    subtitle="One node per C# type your uncommitted change touches, one edge per dependency, read by Roslyn: inherits, implements, holds, signature, creates, calls, uses. Added in green, removed in red, modified in amber."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/screenshots/01-the-change-as-a-graph.png"
-    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(34,197,94,0.15),hsla(0,0%,100%,0));"
+    title="AI-generated code"
+    icon="sparkles"
+    subtitle="The graph shows which types an agent added, removed and modified in your working tree, including ones you did not ask for."
   >}}
   {{< hextra/feature-card
-    title="Laid out like the architecture"
-    subtitle="The types that depend on nothing else in the change sit at the left; what builds on them follows. Each project is a box around its types."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-lg:min-h-[340px]"
-    image="images/screenshots/02-one-type-and-what-depends-on-it.png"
-    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(245,158,11,0.15),hsla(0,0%,100%,0));"
+    title="Uncommitted changes"
+    icon="pencil"
+    subtitle="The graph shows your own change before you commit it. Types and dependencies can be staged from the graph."
   >}}
   {{< hextra/feature-card
-    title="Rider's own diff, one click away"
-    subtitle="Click a type to open Rider's diff of its files, the one the Commit view shows. Click a dependency to see the lines that create it. Select files in the Commit view to highlight their types."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/screenshots/03-the-same-diff-as-the-commit-view.png"
-    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(59,130,246,0.15),hsla(0,0%,100%,0));"
+    title="Pull requests"
+    icon="users"
+    subtitle="The graph shows what a branch changed since it left its target branch, as a pull request does. It works on any branch you have fetched."
   >}}
   {{< hextra/feature-card
-    title="Stage and unstage from the graph"
-    subtitle="Right-click a type, or the lines of one dependency, to stage or unstage it. Every node and edge wears its stage: staged, partly staged, unstaged."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/screenshots/04-stage-from-the-graph.png"
-    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(168,85,247,0.15),hsla(0,0%,100%,0));"
-  >}}
-  {{< hextra/feature-card
-    title="Filter the noise"
-    subtitle="Find a type by name; the rest of the graph dims. In Settings: hide test projects, hide unchanged neighbours, show changed edges only, pick the edge kinds to draw, switch the boxes, choose the layout and line style."
-    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
-    image="images/screenshots/05-the-graph-settings.png"
-    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(20,184,166,0.15),hsla(0,0%,100%,0));"
-  >}}
-  {{< hextra/feature-card
-    title="Runs locally, uploads nothing"
-    icon="lock-closed"
-    subtitle="The analyser is bundled with the plugin and runs on your machine with the .NET SDK you already have. Nothing leaves it."
+    title="Branch and commit comparison"
+    icon="switch-horizontal"
+    subtitle="Compare any two branches, tags or commits, or compare the working tree with any of them."
   >}}
 {{< /hextra/feature-grid >}}
 
-<div class="hx:mt-16" id="features">
+<div class="home-section">
 
 ## Features
 
-**The graph**
+</div>
 
-- One node per C# type the change touches: class, record, struct, interface, enum, delegate.
-- Node colour shows status: added (green), removed (red), modified (amber), unchanged neighbour (grey).
-- One edge per dependency, read by Roslyn: `inherits`, `implements`, `holds`, `signature`, `creates`, `calls`, `uses`.
-- Edges show whether the change added, removed or kept them.
-- Left-to-right layout: the types that depend on nothing else in the change sit at the left.
-- Each project is drawn as a box around its types.
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="Explore how a change is structured"
+    icon="share"
+    subtitle="A graph of the types added, removed and modified since a baseline, and of the dependencies between them. Each type sits to the right of the types it depends on."
+  >}}
+  {{< hextra/feature-card
+    title="Choose the baseline"
+    icon="switch-horizontal"
+    subtitle="Compare the uncommitted changes with the last commit, a branch with the branch it left, or any two commits."
+  >}}
+  {{< hextra/feature-card
+    title="Group by project and namespace"
+    icon="view-grid"
+    subtitle="Types are boxed by their project and namespace, so you see how the parts of the solution depend on each other and which ones a change spans."
+  >}}
+  {{< hextra/feature-card
+    title="Follow a connection end to end"
+    icon="cursor-click"
+    subtitle="Select a type and its whole chain is highlighted: everything it depends on and everything that depends on it, however many steps away. Arrows along the lines show the direction."
+  >}}
+  {{< hextra/feature-card
+    title="Explore the coupling between two types"
+    icon="code"
+    subtitle="Double-click a dependency to see its kinds (inherits, implements, holds, signature, creates, calls, uses) and the lines that create it."
+  >}}
+  {{< hextra/feature-card
+    title="Open the diff from the graph"
+    icon="document-text"
+    subtitle="Double-click a type to open Rider's diff of its files. For uncommitted changes, the graph and Rider's Commit view follow each other's selection."
+  >}}
+  {{< hextra/feature-card
+    title="Search and filter"
+    icon="search"
+    subtitle="Search types by name. Filter out test projects, unchanged types and kinds of dependency."
+  >}}
+  {{< hextra/feature-card
+    title="Stage from the graph"
+    icon="check-circle"
+    subtitle="Right-click a type to stage or unstage its files, or a dependency to stage the lines that create it. Each one shows whether it is staged."
+  >}}
+{{< /hextra/feature-grid >}}
 
-**Reviewing**
+<div class="home-section-note">
 
-- Click a type to open Rider's diff of its files, the same diff the Commit view shows.
-- Click a dependency to see the changed lines that create it. Its two types are highlighted.
-- Select files in the Commit view to highlight their types in the graph.
-- Hover a type for its namespace, status, files and stage; hover an edge for its kinds, status and stage.
+The [full feature list](docs/features) is in the documentation.
 
-**Staging**
+</div>
 
-- Right-click a type or a dependency → **Stage** / **Unstage**.
-- Stage badges on every node and edge: staged, partly staged, unstaged.
+<div class="home-section">
 
-**Filtering and navigation**
+## How to use it
 
-- Find a type by name; types and lines that do not match dim.
-- In **Settings**: hide test projects, hide unchanged neighbours, show changed edges only, pick which edge kinds to draw, switch project and namespace boxes, choose the layout and line style.
-- Pan and zoom. The view is kept across reloads; **Re-layout** and **Fit** reset it.
+1. **Open the graph**
 
-**In Rider**
+   The GitDiffGraph tool window (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>) shows every type the change added (green), removed (red) or modified (amber), and the dependencies between them.
 
-- The **Diff Graph** tool window, opened with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>.
-- Updates by itself as files change; **Refresh** restarts the analysis.
-- Runs locally with the bundled analyser and your .NET 10 SDK. Nothing is uploaded.
+2. **Choose what is compared**
+
+   It starts with the uncommitted changes since the last commit. The `base:` and `compare:` selectors in the graph's header take a branch, a tag or a commit.
+
+3. **Select a type**
+
+   Click it. Its whole chain is highlighted, in both directions, with arrows along the lines pointing at what is depended on. The rest dims.
+
+4. **Open the diff**
+
+   Double-click a type for Rider's diff of its files. Double-click a dependency for the lines that create it.
+
+5. **Stage from the graph**
+
+   Right-click a type or a dependency to stage or unstage it.
+
+
+</div>
+
+<div class="home-section">
+
+## How it fits with the Git diff
+
+</div>
+
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="The diff shows the lines"
+    icon="document-text"
+    subtitle="A Git diff shows which lines changed in which files. It is where you read the code."
+  >}}
+  {{< hextra/feature-card
+    title="The graph shows how they relate"
+    icon="share"
+    subtitle="The graph shows which types those lines belong to, what depends on what, and which projects are involved."
+  >}}
+  {{< hextra/feature-card
+    title="Use them together"
+    icon="switch-horizontal"
+    subtitle="Start in the graph to see what a change is made of, then open the diff from it to read the code."
+  >}}
+{{< /hextra/feature-grid >}}
+
+<div class="home-section">
+
+## What the graph shows
+
+- Which types a change adds, removes and modifies.
+- Which types depend on a changed type.
+- Whether a change is one group of connected types or several separate groups.
+- Which projects a change spans.
+
+</div>
+
+<div class="home-section">
+
+## Technical details
+
+</div>
+
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="Roslyn analysis"
+    icon="badge-check"
+    subtitle="Dependencies are read by Roslyn, the C# compiler. Seven kinds are drawn: inherits, implements, holds, signature, creates, calls, uses."
+  >}}
+  {{< hextra/feature-card
+    title="Runs locally"
+    icon="lock-closed"
+    subtitle="The analyser is bundled with the plugin and runs on your machine with your .NET SDK. Nothing is uploaded."
+  >}}
+{{< /hextra/feature-grid >}}
+
+<div class="home-section">
+
+GitDiffGraph needs a JetBrains Marketplace licence or trial. [How it works](docs/how-it-works) is in the
+documentation.
 
 </div>
 

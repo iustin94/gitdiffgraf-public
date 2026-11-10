@@ -1,26 +1,71 @@
-#features h2 {
+.home-section {
+  margin-top: 4rem;
+}
+
+.home-section h2 {
   font-size: 1.875rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-#features p strong {
-  display: block;
-  margin-top: 1.5rem;
-  font-size: 1.125rem;
-}
-
-#features ul {
+.home-section ul {
   list-style: disc;
   padding-left: 1.5rem;
   margin-top: 0.5rem;
+  font-size: 1.125rem;
 }
 
-#features li {
-  margin: 0.35rem 0;
+.home-section li {
+  margin: 0.5rem 0;
 }
 
-#features code {
-  font-size: 0.875em;
+.home-section a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.home-section ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.hero-video {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.hero-video video {
+  display: block;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.home-section ol li {
+  margin: 1rem 0;
+}
+
+.home-section ol li p {
+  margin: 0.15rem 0 0;
+}
+
+.home-section ol li p:first-child {
+  margin-top: 0;
+}
+
+.home-section ol li p:not(:first-child) {
+  font-size: 0.95rem;
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+.home-section-note {
+  margin-top: 1rem;
+}
+
+.home-section-note a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
