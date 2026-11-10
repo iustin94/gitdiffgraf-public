@@ -3,6 +3,33 @@ title: "Changelog"
 description: "What changed in each release of GitDiffGraph for Rider."
 ---
 
+## 0.13.0
+
+**Header and settings**
+
+- The header is one row: the title, a centred search, and **Fit**, **Re-layout** and **Settings**.
+- Every display choice sits in the **Settings** panel, grouped as Types, Dependencies, Boxes and Drawing.
+- The colour and stage key sits in the corner of the graph.
+
+**Highlighting**
+
+- Added, removed and modified types and lines use calmer colours by default.
+- Selecting a type lights its chain in strong colours, with bold names and thicker lines, and dims the rest.
+- Hovering a type or a line shows it in the same strong colours.
+- Searching dims the lines that touch no matching type.
+
+**Boxes**
+
+- Long namespace and project names are shortened to fit their box, e.g. `…ApplicationCore.Services`.
+- Hovering a box's label shows its full name.
+
+**Fixes**
+
+- Zooming and panning in Rider no longer leave parts of the old picture on screen.
+- Hovering or clicking right on a line, not just beside it, picks the line.
+- Curved lines draw again on graphs with project or namespace boxes, instead of an error.
+- An error notice in the graph has a close button.
+
 ## 0.12.1
 
 **Graph**
