@@ -32,7 +32,7 @@ loads the solution and takes a moment; after that the graph follows your edits o
 
 ### Read the change
 
-Start at the left: those types depend on nothing else in the change. Click a type to open its diff, click an edge to see
+Start at the left: those types depend on nothing else in the change. Click a type to highlight what it connects to, double-click it to open its diff, double-click an edge to see
 the lines that create that dependency.
 
 ### Stage what you reviewed
