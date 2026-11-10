@@ -3,6 +3,18 @@ title: "Changelog"
 description: "What changed in each release of GitDiffGraph for Rider."
 ---
 
+## 0.12.1
+
+**Graph**
+
+- Types show only their name. Their kind, namespace and project stay in the pane a click on the type opens.
+
+**Fixes**
+
+- A refresh with no file changed since the last graph shows that graph at once instead of analysing again, so opening
+  a solution no longer analyses the change twice.
+- A failure in the graph page's script shows in the tool window instead of an empty graph.
+
 ## 0.12.0
 
 **Layout**
