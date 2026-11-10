@@ -41,7 +41,7 @@ Right-click a type or an edge → **Stage** / **Unstage**. The badges show what 
 
 ### Cut the noise
 
-Hide tests, hide unchanged neighbours, show changed edges only, pick edge kinds, or find a type by name.
+Find a type by name in the header. Under **Settings**: hide tests, hide unchanged neighbours, show changed edges only, pick edge kinds.
 
 {{% /steps %}}
 

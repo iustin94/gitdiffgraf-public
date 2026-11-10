@@ -70,8 +70,11 @@ layout: hextra-home
   >}}
   {{< hextra/feature-card
     title="Filter the noise"
-    icon="adjustments"
-    subtitle="Find a type by name, hide test projects, hide unchanged neighbours, show changed edges only, pick the edge kinds to draw. The graph follows your edits and keeps the nodes where you moved them."
+    subtitle="Find a type by name; the rest of the graph dims. In Settings: hide test projects, hide unchanged neighbours, show changed edges only, pick the edge kinds to draw, switch the boxes, choose the layout and line style."
+    class="hx:aspect-auto hx:md:aspect-[1.1/1] hx:max-md:min-h-[340px]"
+    image="images/screenshots/05-the-graph-settings.png"
+    imageClass="hx:top-[50%] hx:left-[24px] hx:w-[180%] hx:sm:w-[110%] hx:dark:opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(20,184,166,0.15),hsla(0,0%,100%,0));"
   >}}
   {{< hextra/feature-card
     title="Runs locally, uploads nothing"
@@ -107,10 +110,9 @@ layout: hextra-home
 
 **Filtering and navigation**
 
-- Find a type by name.
-- Hide test projects, hide unchanged neighbours, show changed edges only.
-- Pick which edge kinds to draw.
-- Pan, zoom and drag nodes. Positions are kept across reloads; **re-layout** and **fit** reset the view.
+- Find a type by name; types and lines that do not match dim.
+- In **Settings**: hide test projects, hide unchanged neighbours, show changed edges only, pick which edge kinds to draw, switch project and namespace boxes, choose the layout and line style.
+- Pan and zoom. The view is kept across reloads; **Re-layout** and **Fit** reset it.
 
 **In Rider**
 

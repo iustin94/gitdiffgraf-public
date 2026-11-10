@@ -14,6 +14,7 @@ the cache. Only the projects holding changed files are compiled.
 ![One type and what depends on it](/images/screenshots/02-one-type-and-what-depends-on-it.png)
 ![The same diff as the Commit view](/images/screenshots/03-the-same-diff-as-the-commit-view.png)
 ![Stage from the graph](/images/screenshots/04-stage-from-the-graph.png)
+![The graph settings](/images/screenshots/05-the-graph-settings.png)
 
 ## Limits
 
