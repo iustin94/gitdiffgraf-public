@@ -3,14 +3,14 @@ title: "End User License Agreement"
 description: "The terms under which Diff Graph for Rider is licensed."
 ---
 
-**Effective date:** 2026-11-03 · **Licensor:** esio, Denmark (io@esio.dk) · **Software:** the Diff Graph for Rider
+**Effective date:** 2026-11-03 · **Licensor:** Iustinian Olaru, Denmark (io@esio.dk) · **Software:** the Diff Graph for Rider
 plugin, including its bundled analyser and all updates (the "Software").
 
 By installing or using the Software you agree to these terms. If you do not agree, do not install or use it.
 
 ## 1. License
 
-Subject to these terms and to a valid subscription or license purchased through JetBrains Marketplace, esio grants
+Subject to these terms and to a valid subscription or license purchased through JetBrains Marketplace, Iustinian Olaru grants
 you a personal, non-exclusive, non-transferable, revocable license to install and use the Software in JetBrains
 Rider for your own software development, on the number of seats your purchase covers.
 
@@ -23,19 +23,19 @@ build a product that competes with it; (e) circumvent its license checks.
 
 ## 3. Ownership
 
-The Software is licensed, not sold. esio and its licensors retain all right, title and interest in the Software,
+The Software is licensed, not sold. Iustinian Olaru and the Software's licensors retain all right, title and interest in the Software,
 including all intellectual property rights. Third-party components are listed in the plugin's distribution and are
 licensed under their own terms.
 
 ## 4. Data
 
 The Software analyses your repository on your machine. It does not transmit your source code, repository contents
-or analysis results to esio or to any third party. JetBrains Marketplace handles licensing and may process the data
+or analysis results to Iustinian Olaru or to any third party. JetBrains Marketplace handles licensing and may process the data
 described in the JetBrains privacy policy.
 
 ## 5. Updates and support
 
-esio may release updates through JetBrains Marketplace. Support is provided on a reasonable-effort basis through
+Iustinian Olaru may release updates through JetBrains Marketplace. Support is provided on a reasonable-effort basis through
 the issue tracker at the address shown on the product page.
 
 ## 6. Term and termination
@@ -50,8 +50,8 @@ merchantability, fitness for a particular purpose and non-infringement.
 
 ## 8. Limitation of liability
 
-To the maximum extent permitted by law, esio is not liable for any indirect, incidental, special, consequential or
-punitive damages, or for loss of data, profits or business, arising from the Software, and esio's total liability
+To the maximum extent permitted by law, Iustinian Olaru is not liable for any indirect, incidental, special, consequential or
+punitive damages, or for loss of data, profits or business, arising from the Software, and Iustinian Olaru's total liability
 under this agreement is limited to the amount you paid for the Software in the twelve months before the claim.
 Nothing here limits liability that cannot be limited under applicable law.
 
@@ -62,4 +62,4 @@ prejudice to mandatory consumer protection rules of your country of residence.
 
 ## 10. Contact
 
-esio · io@esio.dk
+Iustinian Olaru · io@esio.dk
