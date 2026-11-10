@@ -3,6 +3,40 @@ title: "Changelog"
 description: "What changed in each release of GitDiffGraph for Rider."
 ---
 
+## 0.14.0
+
+**Choose what is compared**
+
+- Two selectors in the graph's header, `base:` and `compare:`, as on a pull request page. They take the place of the
+  title, and start as the last commit and the uncommitted changes, which is the graph as before.
+- `compare:` takes a branch, a recent commit, a tag or a commit hash: the graph draws what it added since it left the
+  base, the way a pull request shows it. Use it to review a teammate's branch, or two commits of your own.
+- `base:` takes the same, or the last commit. With the uncommitted changes compared, it draws everything your
+  branch holds since it left the base, committed or not.
+- A double-click on a type opens Rider's diff of its files between the two sides.
+- Staging shows only for the uncommitted changes since the last commit.
+
+**Selecting and opening**
+
+- A click on a type or a line now only selects it. A double-click opens the diff, or the lines behind a dependency.
+  Before, every click opened the diff.
+- Selecting a type highlights its whole chain: everything it depends on and everything that depends on it, however
+  many steps away.
+- Small arrows along the highlighted lines point at what is depended on, so the direction reads anywhere along a line.
+
+**Legend**
+
+- The key in the corner is now a legend in four sections, one entry per line: nodes, lines, selection and staging.
+- It explains the line colours, which the key did not: added, removed and unchanged dependencies.
+- Fit, and the zoom to a selection, place the graph beside the legend instead of under it.
+- **Settings → Legend** hides it.
+
+**Fixes**
+
+- An unchanged dependency shows its own line when opened, not a nearby change.
+- A selected type stays selected when Rider selects its files in the Commit view.
+- A failed `dotnet restore` says what dotnet reported instead of an empty reason.
+
 ## 0.13.0
 
 **Header and settings**
