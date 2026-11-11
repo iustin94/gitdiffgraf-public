@@ -17,7 +17,6 @@ disableKinds = ["taxonomy", "term", "rss"]
   vendor = "Iustinian Olaru"
   vendorUrl = "https://olaru.dk/"
   vendorGitHubUrl = "https://github.com/iustin94"
-  contactEmail = "io@esio.dk"
 
   [params.navbar]
     displayTitle = true
