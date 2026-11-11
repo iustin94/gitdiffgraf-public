@@ -1,6 +1,6 @@
 ---
 title: "Features"
-description: "Every feature of GitDiffGraph: choosing what is compared, reading the graph, opening diffs, searching and staging."
+description: "Every feature of GitDiffGraph: choosing what is compared, reading the graph, opening diffs, searching, staging and letting an agent explain the change."
 weight: 3
 ---
 
@@ -29,7 +29,7 @@ weight: 3
 - Click a type to select it and highlight its whole chain: everything it depends on and everything that depends on it. Arrows along
   the highlighted lines point at what is depended on.
 - Double-click a dependency to see the lines that create it. A click selects it and highlights its two types.
-- A legend in the corner explains the nodes, the lines, the selection and the stage badges.
+- A legend in the corner explains the nodes, the lines, the selection and the staging.
 - Select files in the Commit view to highlight their types in the graph.
 - Hover a type for its namespace, status, files and stage; hover an edge for its kinds, status and stage.
 
@@ -37,7 +37,19 @@ weight: 3
 
 - Right-click a type or a dependency → **Stage** / **Unstage**.
 - Staging shows for the uncommitted changes since the last commit.
-- Stage badges on every node and edge: staged, partly staged, unstaged.
+- Every node and edge shows its stage by its opacity: staged faded, partly staged half faded, unstaged at full
+  opacity. A conflicted one carries a red circle.
+
+**Agents**
+
+- An AI agent connected to Rider's MCP server, such as Claude Code, reads the graph, moves the view to the types and
+  dependencies it names and pins notes on them to explain the change.
+- It works only while the GitDiffGraph window is open, on the project in focus.
+- A note is a numbered badge on its type or dependency; the notes are listed in a collapsible panel beside the graph.
+  Click a badge to find its note, or a note to move the view to it.
+- Notes are kept per comparison in the project's `.idea/gitdiffgraph/notes/`, and marked stale when an analysis draws
+  a different graph.
+- Setup and the nine tools: [Agents and MCP](../agents/).
 
 **Filtering and navigation**
 

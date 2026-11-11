@@ -37,7 +37,14 @@ the lines that create that dependency.
 
 ### Stage what you reviewed
 
-Right-click a type or an edge → **Stage** / **Unstage**. The badges show what is staged, partly staged or unstaged.
+Right-click a type or an edge → **Stage** / **Unstage**. Staged types and edges are drawn faded, partly staged ones
+half faded.
+
+### Let an agent explain the change
+
+Enable Rider's MCP server (Settings → Tools → MCP Server) and connect your agent to it. With the GitDiffGraph window
+open, ask the agent to walk you through the change: it moves the view and pins numbered notes, listed beside the
+graph. More in [Agents and MCP](../agents/).
 
 ### Cut the noise
 

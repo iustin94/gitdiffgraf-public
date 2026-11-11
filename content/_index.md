@@ -29,7 +29,8 @@ layout: hextra-home
 {{< hextra/hero-subtitle >}}
   GitDiffGraph is a Rider plugin that works alongside the Git diff. The diff shows a change line by line. The graph
   shows how those lines relate: which types changed, in what order they build on each other, and how they connect
-  across projects.
+  across projects. Built for agentic development: review what your AI agent changed, and let the agent walk you
+  through it on the graph.
 {{< /hextra/hero-subtitle >}}
 </div>
 
@@ -47,7 +48,7 @@ layout: hextra-home
   {{< hextra/feature-card
     title="AI-generated code"
     icon="sparkles"
-    subtitle="The graph shows which types an agent added, removed and modified in your working tree, including ones you did not ask for."
+    subtitle="The graph shows which types an agent added, removed and modified in your working tree, including ones you did not ask for. Connected to Rider's MCP server, the agent can pin notes on the graph to explain them."
   >}}
   {{< hextra/feature-card
     title="Uncommitted changes"
@@ -68,6 +69,36 @@ layout: hextra-home
 
 <div class="home-section">
 
+## Built for agentic development
+
+</div>
+
+{{< hextra/feature-grid >}}
+  {{< hextra/feature-card
+    title="Review what the agent wrote"
+    icon="eye"
+    subtitle="Every type an agent added, removed or modified, and every dependency it created, drawn as one graph. Types you did not ask for stand out."
+  >}}
+  {{< hextra/feature-card
+    title="The agent explains it on the graph"
+    icon="chat-alt-2"
+    subtitle="Connected to Rider's MCP server, the agent reads the graph, moves the view to what it is talking about and pins notes on the types and dependencies."
+  >}}
+  {{< hextra/feature-card
+    title="Notes beside the graph"
+    icon="annotation"
+    subtitle="Numbered badges on the graph, the notes listed in a panel beside it. Kept per comparison, marked stale when the change moves on."
+  >}}
+  {{< hextra/feature-card
+    title="Only while you look"
+    icon="lock-closed"
+    subtitle="The tools answer only while the GitDiffGraph window is open, on the project in focus. A closed window starts no analysis."
+    link="docs/agents"
+  >}}
+{{< /hextra/feature-grid >}}
+
+<div class="home-section">
+
 ## Features
 
 </div>
@@ -75,13 +106,14 @@ layout: hextra-home
 <div class="feature-show" id="featureShow">
   <div class="feature-show-track">
     <figure>{{< themed-picture src="images/features/01-structure.jpg" alt="The whole change drawn as a graph of its types, boxed by project" >}}<figcaption><h3>Explore how a change is structured</h3><p>A graph of the types added, removed and modified since a baseline, and of the dependencies between them. Each type sits to the right of the types it depends on.</p></figcaption></figure>
+    <figure>{{< themed-picture src="images/features/09-agent-notes.jpg" alt="The graph with an agent's numbered notes on its types and dependencies, and the notes panel beside it" >}}<figcaption><h3>Let your agent explain the change</h3><p>An AI agent connected to Rider's MCP server moves the view to the types it explains and pins numbered notes on them, listed beside the graph.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/02-baseline.jpg" alt="The base and compare selectors in the header of the graph" >}}<figcaption><h3>Choose the baseline</h3><p>Compare the uncommitted changes with the last commit, a branch with the branch it left, or any two commits.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/03-grouping.jpg" alt="Types boxed by project and by namespace" >}}<figcaption><h3>Group by project and namespace</h3><p>Types are boxed by their project and namespace, so you see how the parts of the solution depend on each other and which ones a change spans.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/04-chain.jpg" alt="A selected type with its whole chain highlighted and arrows along the lines" >}}<figcaption><h3>Follow a connection end to end</h3><p>Select a type and its whole chain is highlighted: everything it depends on and everything that depends on it, however many steps away. Arrows along the lines show the direction.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/05-coupling.jpg" alt="Rider with a dependency selected in the graph and the lines that create it open in Rider's diff, before and after" >}}<figcaption><h3>Explore the coupling between two types</h3><p>Double-click a dependency to see its kinds (inherits, implements, holds, signature, creates, calls, uses) and the lines that create it.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/06-diff.jpg" alt="Rider with a type selected in the graph, its file selected in the Commit view and its diff open in the editor" >}}<figcaption><h3>Open the diff from the graph</h3><p>Double-click a type to open Rider's diff of its files. For uncommitted changes, the graph and Rider's Commit view follow each other's selection.</p></figcaption></figure>
     <figure>{{< themed-picture src="images/features/07-search.jpg" alt="A search for Basket: the matching types stay lit and the rest dims" >}}<figcaption><h3>Search and filter</h3><p>Search types by name. Filter out test projects, unchanged types and kinds of dependency.</p></figcaption></figure>
-    <figure>{{< themed-picture src="images/features/08-staging.jpg" alt="Stage badges on the graph, the Stage and Unstage menu, and the legend" >}}<figcaption><h3>Stage from the graph</h3><p>Right-click a type to stage or unstage its files, or a dependency to stage the lines that create it. Each one shows whether it is staged.</p></figcaption></figure>
+    <figure>{{< themed-picture src="images/features/08-staging.jpg" alt="Staged types drawn faded on the graph, the Stage and Unstage menu, and the legend" >}}<figcaption><h3>Stage from the graph</h3><p>Right-click a type to stage or unstage its files, or a dependency to stage the lines that create it. Staged ones are drawn faded, partly staged ones half faded.</p></figcaption></figure>
   </div>
   <button class="feature-show-previous" type="button" aria-label="Previous feature">‹</button>
   <button class="feature-show-next" type="button" aria-label="Next feature">›</button>
@@ -111,7 +143,11 @@ layout: hextra-home
 
 5. **Stage from the graph**
 
-   Right-click a type or a dependency to stage or unstage it.
+   Right-click a type or a dependency to stage or unstage it. Staged ones are drawn faded.
+
+6. **Let an agent explain it**
+
+   Connect your AI agent to Rider's MCP server. It moves the view to what it explains and pins numbered notes, listed beside the graph.
 
 
 </div>
@@ -137,6 +173,12 @@ layout: hextra-home
     title="No telemetry"
     icon="shield-check"
     subtitle="The plugin records no telemetry and no usage data, and it makes no network requests of its own. Your code and the graph stay on your machine."
+  >}}
+  {{< hextra/feature-card
+    title="MCP toolset"
+    icon="puzzle"
+    subtitle="Nine tools in Rider's own MCP server: read the graph and the view, focus, fit, and pin, list and remove notes."
+    link="docs/agents"
   >}}
 {{< /hextra/feature-grid >}}
 
