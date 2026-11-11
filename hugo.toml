@@ -43,6 +43,11 @@ disableKinds = ["taxonomy", "term", "rss"]
   weight = 2
 
 [[menu.main]]
+  name = "Build notes"
+  pageRef = "/blog"
+  weight = 3
+
+[[menu.main]]
   name = "About"
   pageRef = "/about"
   weight = 3
@@ -131,6 +136,13 @@ disableKinds = ["taxonomy", "term", "rss"]
   name = "About"
   pageRef = "/about"
   weight = 11
+  [menu.footer.params]
+    group = "Author"
+
+[[menu.footer]]
+  name = "Build notes"
+  pageRef = "/blog"
+  weight = 12
   [menu.footer.params]
     group = "Author"
 
