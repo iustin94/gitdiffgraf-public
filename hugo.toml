@@ -43,6 +43,11 @@ disableKinds = ["taxonomy", "term", "rss"]
   weight = 2
 
 [[menu.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 3
+
+[[menu.main]]
   name = "Issues"
   url = "https://github.com/iustin94/gitdiffgraf-public/issues"
   weight = 4
@@ -121,6 +126,13 @@ disableKinds = ["taxonomy", "term", "rss"]
   weight = 10
   [menu.footer.params]
     group = "Support"
+
+[[menu.footer]]
+  name = "About"
+  pageRef = "/about"
+  weight = 11
+  [menu.footer.params]
+    group = "Author"
 
 [[menu.footer]]
   name = "EULA"
