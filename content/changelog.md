@@ -22,6 +22,11 @@ description: "What changed in each release of GitDiffGraph for Rider."
 - A conflicted type or dependency keeps its red circle.
 - The legend's Staging section shows the three opacities and the conflict circle.
 
+**Fixes**
+
+- The graph follows Rider's theme, light or dark, and switches with it; it followed the system's colour scheme, so
+  a light Rider could show a dark graph.
+
 ## 2026.1.0
 
 **Choose what is compared**
