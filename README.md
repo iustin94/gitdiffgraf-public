@@ -22,6 +22,7 @@ hugo --minify        # ./public
 | Footer copyright line | `i18n/en.yaml` `copyright` |
 | Hero (title, the two videos and their toggle), use cases, the feature card show, how to use it, technical details, the issue callout | `content/_index.md` |
 | The hero videos, the feature pictures and their scripts | `static/videos/`, `static/images/features/`, `static/js/` |
+| A picture or video in the page's theme | every file is a pair, `<name>-light.<ext>` and `<name>-dark.<ext>`; pages name the pair without the suffix through `{{< themed-picture src=… alt=… >}}` and `{{< themed-video … >}}` (`layouts/_shortcodes/`). `themed-picture` shows the pair's member of the `light`/`dark` class Hextra sets on `<html>` (`assets/css/custom.css`); `static/js/hero-videos.js` loads the video and poster of that theme and reloads them on the theme toggle. The build fails naming each missing member |
 | The full feature list | `content/docs/features.md` |
 | Styling of the product page and the footer links | `assets/css/custom.css` (Hextra loads it after its own CSS) |
 | Screenshots | `static/images/screenshots/`, referenced by `content/docs/how-it-works.md` |

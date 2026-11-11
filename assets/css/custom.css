@@ -227,3 +227,8 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+html:not(.dark) .themed-dark,
+html.dark .themed-light {
+  display: none;
+}

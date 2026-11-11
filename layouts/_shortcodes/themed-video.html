@@ -1,0 +1,4 @@
+{{- $video := partial "themed-pair.html" (.Get "src") -}}
+{{- $poster := partial "themed-pair.html" (.Get "poster") -}}
+{{- $shownFirst := eq (.Get "shown") "true" -}}
+<video data-video="{{ .Get "video" }}" data-light-src="{{ $video.light | relURL }}" data-dark-src="{{ $video.dark | relURL }}" data-light-poster="{{ $poster.light | relURL }}" data-dark-poster="{{ $poster.dark | relURL }}" {{ if $shownFirst }}autoplay preload="metadata"{{ else }}hidden preload="none"{{ end }} muted loop playsinline aria-label="{{ .Get "label" }}"></video>

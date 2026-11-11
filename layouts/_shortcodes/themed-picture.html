@@ -1,0 +1,3 @@
+{{- $pair := partial "themed-pair.html" (.Get "src") -}}
+{{- $alt := .Get "alt" -}}
+<img class="themed-light" src="{{ $pair.light | relURL }}" alt="{{ $alt }}" loading="lazy" /><img class="themed-dark" src="{{ $pair.dark | relURL }}" alt="{{ $alt }}" loading="lazy" />

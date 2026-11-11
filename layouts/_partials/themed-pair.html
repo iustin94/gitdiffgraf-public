@@ -1,0 +1,11 @@
+{{- $extension := path.Ext . -}}
+{{- $name := strings.TrimSuffix $extension . -}}
+{{- $light := printf "%s-light%s" $name $extension -}}
+{{- $dark := printf "%s-dark%s" $name $extension -}}
+{{- range slice $light $dark -}}
+  {{- $file := path.Join "static" . -}}
+  {{- if not (fileExists $file) -}}
+    {{- errorf "%s is missing: every picture and video is taken in the light and the dark theme, as <name>-light and <name>-dark" $file -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "light" $light "dark" $dark) -}}
