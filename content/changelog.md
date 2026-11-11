@@ -3,6 +3,25 @@ title: "Changelog"
 description: "What changed in each release of GitDiffGraph for Rider."
 ---
 
+## 2026.2.0
+
+**Agents explain the change**
+
+- An AI agent connected to Rider's MCP server, such as Claude Code, can read the graph, move the view to the types
+  and dependencies it names, and pin notes on them to explain the change.
+- It works only while the GitDiffGraph window is open, and only on the project in focus.
+- A note is a numbered badge on its type or dependency; the notes' texts are listed in a panel beside the graph,
+  which can be collapsed. Click a badge to find its note, or a note to move the view to it.
+- Notes are kept per comparison in the project's `.idea/gitdiffgraph/notes/`. When an analysis draws a different
+  graph, the notes are marked stale and listed greyed with the reason.
+
+**Staging**
+
+- A type's or a dependency's stage shows by its opacity: staged is faded, partly staged half faded, unstaged as
+  before. The blue stage circles are gone.
+- A conflicted type or dependency keeps its red circle.
+- The legend's Staging section shows the three opacities and the conflict circle.
+
 ## 2026.1.0
 
 **Choose what is compared**
