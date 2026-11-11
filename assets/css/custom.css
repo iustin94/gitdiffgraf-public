@@ -36,6 +36,35 @@
   margin: 1.5rem 0 2.5rem;
 }
 
+.hero-video-choice {
+  display: flex;
+  width: fit-content;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  margin: 0.75rem auto 0;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 999px;
+}
+
+.hero-video-choice button {
+  padding: 0.3rem 0.9rem;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.hero-video-choice button[aria-selected="true"] {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  font-weight: 600;
+}
+
+.hero-video video[hidden] {
+  display: none;
+}
+
 .hero-video video {
   display: block;
   width: 100%;

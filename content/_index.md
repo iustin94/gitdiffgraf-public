@@ -3,10 +3,6 @@ title: "Diff Graph for Rider"
 layout: hextra-home
 ---
 
-<div class="hero-video">
-  <video src="videos/gitdiffgraph-in-use.mp4" poster="videos/gitdiffgraph-in-use-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The graph in use: select a type, open its diff, follow a dependency, search"></video>
-</div>
-
 {{< hextra/hero-badge link="https://github.com/iustin94/gitdiffgraf-public/issues" >}}
   <span>Ideas and bug reports welcome on GitHub</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
@@ -17,6 +13,16 @@ layout: hextra-home
   A visualization tool for&nbsp;<br class="hx:sm:block hx:hidden" />C# code changes
 {{< /hextra/hero-headline >}}
 </div>
+
+<div class="hero-video" id="heroVideo">
+  <video data-video="browser" src="videos/gitdiffgraph-in-browser.mp4" poster="videos/gitdiffgraph-in-browser-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The graph page in a browser: choose what to compare, select a type, open its diff, open the lines behind a dependency, search"></video>
+  <video data-video="rider" src="videos/gitdiffgraph-in-rider.mp4" poster="videos/gitdiffgraph-in-rider-poster.jpg" muted loop playsinline preload="none" hidden aria-label="GitDiffGraph in Rider: choose what to compare, select a type, open its diff, open the lines behind a dependency, search"></video>
+  <div class="hero-video-choice" role="tablist" aria-label="Where the graph is shown">
+    <button type="button" role="tab" aria-selected="true" data-video="browser">In the browser</button>
+    <button type="button" role="tab" aria-selected="false" data-video="rider">In Rider</button>
+  </div>
+</div>
+<script src="js/hero-videos.js"></script>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
