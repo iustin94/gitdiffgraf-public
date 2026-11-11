@@ -1,9 +1,9 @@
 ---
 title: "End User License Agreement"
-description: "The terms under which Diff Graph for Rider is licensed."
+description: "The terms under which GitDiffGraph for Rider is licensed."
 ---
 
-**Effective date:** 2026-11-03 · **Licensor:** Iustinian Olaru, Denmark (io@esio.dk) · **Software:** the Diff Graph for Rider
+**Effective date:** 2026-11-03 · **Licensor:** Iustinian Olaru, Denmark (io@esio.dk) · **Software:** the GitDiffGraph for Rider
 plugin, including its bundled analyser and all updates (the "Software").
 
 By installing or using the Software you agree to these terms. If you do not agree, do not install or use it.

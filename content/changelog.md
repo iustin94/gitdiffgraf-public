@@ -113,7 +113,7 @@ description: "What changed in each release of GitDiffGraph for Rider."
 
 ## 0.11.0
 
-- The **Diff Graph** tool window draws your uncommitted C# change as the graph of the types it touches, opened with
+- The **GitDiffGraph** tool window draws your uncommitted C# change as the graph of the types it touches, opened with
   `Ctrl+Shift+Alt+G`.
 - Click a type to open Rider's diff of its files, the same diff the Commit view shows.
 - Click a dependency line to see the changed lines that create it.

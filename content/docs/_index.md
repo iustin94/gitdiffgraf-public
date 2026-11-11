@@ -2,7 +2,7 @@
 title: "Documentation"
 ---
 
-Diff Graph adds a tool window to Rider that draws your uncommitted C# change as the graph of the types it touches.
+GitDiffGraph adds a tool window to Rider that draws a C# code change as the graph of the types it touches.
 
 {{< cards >}}
   {{< card link="getting-started" title="Getting started" icon="play" subtitle="Install, activate and review your first change." >}}

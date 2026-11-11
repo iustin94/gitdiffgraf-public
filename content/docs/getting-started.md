@@ -26,7 +26,7 @@ Edit C# files yourself or let your AI assistant do it. The graph shows everythin
 
 ### Open the graph
 
-View → Tool Windows → Diff Graph, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>. The first analysis
+View → Tool Windows → GitDiffGraph, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd>. The first analysis
 loads the solution and takes a moment; after that the graph follows your edits on its own.
 
 ### Read the change

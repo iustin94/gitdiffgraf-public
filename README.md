@@ -1,6 +1,6 @@
-# Diff Graph for Rider — product page
+# GitDiffGraph for Rider — product page
 
-The public page for the [Diff Graph](https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph) Rider
+The public page for the [GitDiffGraph](https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph) Rider
 plugin: what it does, screenshots, install steps, the [EULA](content/eula.md) and the changelog. The plugin's source is
 not here; the plugin is installed from JetBrains Marketplace, and bugs go to
 [Issues](https://github.com/iustin94/gitdiffgraf-public/issues).

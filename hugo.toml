@@ -1,5 +1,5 @@
 baseURL = "https://gitdiffgraph.olaru.dk/"
-title = "Diff Graph for Rider"
+title = "GitDiffGraph for Rider"
 locale = "en"
 theme = "hextra"
 enableRobotsTXT = true
