@@ -23,7 +23,7 @@ layout: hextra-home
     <button type="button" role="tab" aria-selected="false" data-video="rider">In Rider</button>
   </div>
 </div>
-<script src="js/hero-videos.js"></script>
+{{< page-script src="js/hero-videos.js" >}}
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
@@ -119,7 +119,7 @@ layout: hextra-home
   <button class="feature-show-next" type="button" aria-label="Next feature">›</button>
   <div class="feature-show-dots"></div>
 </div>
-<script src="js/feature-show.js"></script>
+{{< page-script src="js/feature-show.js" >}}
 
 <div class="home-section">
 

@@ -1,0 +1,5 @@
+{{- $path := .Get "src" -}}
+{{- $source := resources.Get $path -}}
+{{- if not $source -}}{{- errorf "page-script: no asset at assets/%s" $path -}}{{- end -}}
+{{- $script := $source | fingerprint -}}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
