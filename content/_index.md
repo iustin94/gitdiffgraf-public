@@ -122,41 +122,6 @@ layout: hextra-home
 
 <div class="home-section">
 
-## How it fits with the Git diff
-
-</div>
-
-{{< hextra/feature-grid >}}
-  {{< hextra/feature-card
-    title="The diff shows the lines"
-    icon="document-text"
-    subtitle="A Git diff shows which lines changed in which files. It is where you read the code."
-  >}}
-  {{< hextra/feature-card
-    title="The graph shows how they relate"
-    icon="share"
-    subtitle="The graph shows which types those lines belong to, what depends on what, and which projects are involved."
-  >}}
-  {{< hextra/feature-card
-    title="Use them together"
-    icon="switch-horizontal"
-    subtitle="Start in the graph to see what a change is made of, then open the diff from it to read the code."
-  >}}
-{{< /hextra/feature-grid >}}
-
-<div class="home-section">
-
-## What the graph shows
-
-- Which types a change adds, removes and modifies.
-- Which types depend on a changed type.
-- Whether a change is one group of connected types or several separate groups.
-- Which projects a change spans.
-
-</div>
-
-<div class="home-section">
-
 ## Technical details
 
 </div>
@@ -172,14 +137,12 @@ layout: hextra-home
     icon="lock-closed"
     subtitle="The analyser is bundled with the plugin and runs on your machine with your .NET SDK. Nothing is uploaded."
   >}}
+  {{< hextra/feature-card
+    title="No telemetry"
+    icon="shield-check"
+    subtitle="The plugin records no telemetry and no usage data, and it makes no network requests of its own. Your code and the graph stay on your machine."
+  >}}
 {{< /hextra/feature-grid >}}
-
-<div class="home-section">
-
-GitDiffGraph needs a JetBrains Marketplace licence or trial. [How it works](docs/how-it-works) is in the
-documentation.
-
-</div>
 
 <div class="hx:mt-16 hx:mb-8">
 {{< callout type="info" >}}

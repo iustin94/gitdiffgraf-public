@@ -90,15 +90,6 @@
   color: color-mix(in srgb, currentColor 65%, transparent);
 }
 
-.home-section-note {
-  margin-top: 1rem;
-}
-
-.home-section-note a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 .feature-show {
   position: relative;
   max-width: 100%;
