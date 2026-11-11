@@ -3,7 +3,7 @@ title: "Changelog"
 description: "What changed in each release of GitDiffGraph for Rider."
 ---
 
-## 0.14.0
+## 2026.1.0
 
 **Choose what is compared**
 
@@ -23,6 +23,15 @@ description: "What changed in each release of GitDiffGraph for Rider."
 - Selecting a type highlights its whole chain: everything it depends on and everything that depends on it, however
   many steps away.
 - Small arrows along the highlighted lines point at what is depended on, so the direction reads anywhere along a line.
+- A right-click on a type or a dependency offers **Show Git diff**, what a double-click does in Rider, and
+  **Open side pane**, what a double-click does in a browser. The stage moves follow under a line.
+
+**Side pane**
+
+- The side pane shows what a type depends on, what depends on it, and its changes. The Members and Whole file tabs
+  are gone.
+- Added and removed lines carry a green or red stripe and a stronger tint, readable in the dark theme.
+- What a type depends on, and what depends on it, list one type per row.
 
 **Legend**
 
@@ -36,6 +45,12 @@ description: "What changed in each release of GitDiffGraph for Rider."
 - An unchanged dependency shows its own line when opened, not a nearby change.
 - A selected type stays selected when Rider selects its files in the Commit view.
 - A failed `dotnet restore` says what dotnet reported instead of an empty reason.
+- A dependency on both sides whose own lines changed is drawn amber as modified, and stays with **Changed only**.
+  Before, it was grey and hidden.
+- A double-click on a type declared in several files, such as a partial class, opens Rider's diff of its changed
+  files. Before, Rider answered that it had no change to show.
+- Staging no longer moves the graph to another type: the graph follows the selections you make in the Commit view,
+  not the ones Rider makes after staging.
 
 ## 0.13.0
 
