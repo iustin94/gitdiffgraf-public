@@ -2,7 +2,7 @@
 title: "Laying out the graph: from dagre to ELK"
 description: "Why edges crossed and ran over nodes, and what changed when the layout moved to ELK."
 date: 2026-11-11
-weight: 2
+weight: 3
 ---
 
 The first layout was hard to read: edges crossed and ran over nodes. This note covers the cause and the layout that

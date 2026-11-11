@@ -14,6 +14,8 @@ that spans many files, that order has to be rebuilt in the reader's head.
 GitDiffGraph draws that order. It reads both sides of a change with Roslyn, compares the two graphs of types and
 dependencies, and draws the difference beside the diff in Rider.
 
+The longer story, with the research behind it, is in [Why GitDiffGraph](/blog/why-gitdiffgraph).
+
 ## What is in it
 
 | Part | Built with |

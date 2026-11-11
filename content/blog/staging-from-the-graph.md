@@ -2,7 +2,7 @@
 title: "Staging from the graph"
 description: "How a right-click on a type or a dependency stages exactly its lines, and why the plugin owns every stage."
 date: 2026-11-11
-weight: 3
+weight: 4
 ---
 
 In Rider, a right-click on a changed type or dependency stages or unstages it, and the graph shows what is staged.

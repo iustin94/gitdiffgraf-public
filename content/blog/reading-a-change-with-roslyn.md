@@ -2,7 +2,7 @@
 title: "Reading a change with Roslyn"
 description: "How both sides of a Git change become two graphs of types, and how the working tree is cached like a commit."
 date: 2026-11-11
-weight: 1
+weight: 2
 ---
 
 GitDiffGraph draws a change as the types it touches and the dependencies between them. That needs a graph of the code
