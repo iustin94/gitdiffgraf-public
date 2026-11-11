@@ -76,54 +76,22 @@ layout: hextra-home
 
 </div>
 
-{{< hextra/feature-grid >}}
-  {{< hextra/feature-card
-    title="Explore how a change is structured"
-    icon="share"
-    subtitle="A graph of the types added, removed and modified since a baseline, and of the dependencies between them. Each type sits to the right of the types it depends on."
-  >}}
-  {{< hextra/feature-card
-    title="Choose the baseline"
-    icon="switch-horizontal"
-    subtitle="Compare the uncommitted changes with the last commit, a branch with the branch it left, or any two commits."
-  >}}
-  {{< hextra/feature-card
-    title="Group by project and namespace"
-    icon="view-grid"
-    subtitle="Types are boxed by their project and namespace, so you see how the parts of the solution depend on each other and which ones a change spans."
-  >}}
-  {{< hextra/feature-card
-    title="Follow a connection end to end"
-    icon="cursor-click"
-    subtitle="Select a type and its whole chain is highlighted: everything it depends on and everything that depends on it, however many steps away. Arrows along the lines show the direction."
-  >}}
-  {{< hextra/feature-card
-    title="Explore the coupling between two types"
-    icon="code"
-    subtitle="Double-click a dependency to see its kinds (inherits, implements, holds, signature, creates, calls, uses) and the lines that create it."
-  >}}
-  {{< hextra/feature-card
-    title="Open the diff from the graph"
-    icon="document-text"
-    subtitle="Double-click a type to open Rider's diff of its files. For uncommitted changes, the graph and Rider's Commit view follow each other's selection."
-  >}}
-  {{< hextra/feature-card
-    title="Search and filter"
-    icon="search"
-    subtitle="Search types by name. Filter out test projects, unchanged types and kinds of dependency."
-  >}}
-  {{< hextra/feature-card
-    title="Stage from the graph"
-    icon="check-circle"
-    subtitle="Right-click a type to stage or unstage its files, or a dependency to stage the lines that create it. Each one shows whether it is staged."
-  >}}
-{{< /hextra/feature-grid >}}
-
-<div class="home-section-note">
-
-The [full feature list](docs/features) is in the documentation.
-
+<div class="feature-show" id="featureShow">
+  <div class="feature-show-track">
+    <figure><img src="images/features/01-structure.jpg" alt="The whole change drawn as a graph of its types, boxed by project" loading="lazy" /><figcaption><h3>Explore how a change is structured</h3><p>A graph of the types added, removed and modified since a baseline, and of the dependencies between them. Each type sits to the right of the types it depends on.</p></figcaption></figure>
+    <figure><img src="images/features/02-baseline.jpg" alt="The base and compare selectors in the header of the graph" loading="lazy" /><figcaption><h3>Choose the baseline</h3><p>Compare the uncommitted changes with the last commit, a branch with the branch it left, or any two commits.</p></figcaption></figure>
+    <figure><img src="images/features/03-grouping.jpg" alt="Types boxed by project and by namespace" loading="lazy" /><figcaption><h3>Group by project and namespace</h3><p>Types are boxed by their project and namespace, so you see how the parts of the solution depend on each other and which ones a change spans.</p></figcaption></figure>
+    <figure><img src="images/features/04-chain.jpg" alt="A selected type with its whole chain highlighted and arrows along the lines" loading="lazy" /><figcaption><h3>Follow a connection end to end</h3><p>Select a type and its whole chain is highlighted: everything it depends on and everything that depends on it, however many steps away. Arrows along the lines show the direction.</p></figcaption></figure>
+    <figure><img src="images/features/05-coupling.jpg" alt="Rider with a dependency selected in the graph and the lines that create it open in Rider's diff, before and after" loading="lazy" /><figcaption><h3>Explore the coupling between two types</h3><p>Double-click a dependency to see its kinds (inherits, implements, holds, signature, creates, calls, uses) and the lines that create it.</p></figcaption></figure>
+    <figure><img src="images/features/06-diff.jpg" alt="Rider with a type selected in the graph, its file selected in the Commit view and its diff open in the editor" loading="lazy" /><figcaption><h3>Open the diff from the graph</h3><p>Double-click a type to open Rider's diff of its files. For uncommitted changes, the graph and Rider's Commit view follow each other's selection.</p></figcaption></figure>
+    <figure><img src="images/features/07-search.jpg" alt="A search for Basket: the matching types stay lit and the rest dims" loading="lazy" /><figcaption><h3>Search and filter</h3><p>Search types by name. Filter out test projects, unchanged types and kinds of dependency.</p></figcaption></figure>
+    <figure><img src="images/features/08-staging.jpg" alt="Stage badges on the graph, the Stage and Unstage menu, and the legend" loading="lazy" /><figcaption><h3>Stage from the graph</h3><p>Right-click a type to stage or unstage its files, or a dependency to stage the lines that create it. Each one shows whether it is staged.</p></figcaption></figure>
+  </div>
+  <button class="feature-show-previous" type="button" aria-label="Previous feature">‹</button>
+  <button class="feature-show-next" type="button" aria-label="Next feature">›</button>
+  <div class="feature-show-dots"></div>
 </div>
+<script src="js/feature-show.js"></script>
 
 <div class="home-section">
 
