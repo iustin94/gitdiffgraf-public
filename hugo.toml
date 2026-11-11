@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term", "rss"]
 
 [params]
   description = "A Rider plugin that draws a C# code change as a graph of the types it touches and the dependencies between them, beside the Git diff."
-  images = ["images/features/01-structure.jpg"]
+  images = ["images/features/01-structure-dark.jpg"]
   marketplaceUrl = "https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph"
   issuesUrl = "https://github.com/iustin94/gitdiffgraf-public/issues"
   newIssueUrl = "https://github.com/iustin94/gitdiffgraf-public/issues/new"

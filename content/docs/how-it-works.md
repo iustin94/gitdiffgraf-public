@@ -11,11 +11,11 @@ the cache. Only the projects holding changed files are compiled.
 
 ## Screenshots
 
-![The change as a graph](/images/screenshots/01-the-change-as-a-graph.png)
-![One type and what depends on it](/images/screenshots/02-one-type-and-what-depends-on-it.png)
-![The same diff as the Commit view](/images/screenshots/03-the-same-diff-as-the-commit-view.png)
-![Stage from the graph](/images/screenshots/04-stage-from-the-graph.png)
-![The graph settings](/images/screenshots/05-the-graph-settings.png)
+![The change as a graph](/images/screenshots/01-the-change-as-a-graph-dark.png)
+![One type and what depends on it](/images/screenshots/02-one-type-and-what-depends-on-it-dark.png)
+![The same diff as the Commit view](/images/screenshots/03-the-same-diff-as-the-commit-view-dark.png)
+![Stage from the graph](/images/screenshots/04-stage-from-the-graph-dark.png)
+![The graph settings](/images/screenshots/05-the-graph-settings-dark.png)
 
 ## Limits
 
