@@ -1,0 +1,5 @@
+<meta name="author" content="{{ site.Params.vendor }}">
+<link rel="author" href="{{ site.Params.vendorUrl }}">
+{{- $author := dict "@type" "Person" "name" site.Params.vendor "url" site.Params.vendorUrl "sameAs" (slice site.Params.vendorGitHubUrl) -}}
+{{- $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" "GitDiffGraph" "applicationCategory" "DeveloperApplication" "operatingSystem" "Windows, macOS, Linux" "url" site.BaseURL "author" $author }}
+<script type="application/ld+json">{{ $software | jsonify | safeJS }}</script>

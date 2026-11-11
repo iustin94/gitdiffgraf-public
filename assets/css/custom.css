@@ -215,3 +215,14 @@
 .site-footer-links a:hover {
   text-decoration: underline;
 }
+
+.site-footer-byline {
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+.site-footer-byline a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

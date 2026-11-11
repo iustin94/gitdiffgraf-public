@@ -11,6 +11,8 @@ disableKinds = ["taxonomy", "term", "rss"]
   issuesUrl = "https://github.com/iustin94/gitdiffgraf-public/issues"
   newIssueUrl = "https://github.com/iustin94/gitdiffgraf-public/issues/new"
   vendor = "Iustinian Olaru"
+  vendorUrl = "https://olaru.dk/"
+  vendorGitHubUrl = "https://github.com/iustin94"
   contactEmail = "io@esio.dk"
 
   [params.navbar]
@@ -123,7 +125,7 @@ disableKinds = ["taxonomy", "term", "rss"]
 [[menu.footer]]
   name = "EULA"
   pageRef = "/eula"
-  weight = 11
+  weight = 13
   [menu.footer.params]
     group = "Legal"
 
