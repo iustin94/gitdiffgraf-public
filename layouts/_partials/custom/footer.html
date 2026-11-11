@@ -1,0 +1,20 @@
+{{- $groups := slice -}}
+{{- range site.Menus.footer -}}
+  {{- if not (in $groups .Params.group) -}}
+    {{- $groups = $groups | append .Params.group -}}
+  {{- end -}}
+{{- end -}}
+<nav class="site-footer-links" aria-label="Site pages">
+  {{- range $group := $groups }}
+  <div>
+    <h2>{{ $group }}</h2>
+    <ul>
+      {{- range site.Menus.footer }}
+        {{- if eq .Params.group $group }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</nav>

@@ -13,8 +13,7 @@ weight: 1
 
 ### Install
 
-Settings → Plugins → Marketplace → **Diff Graph** → Install, or install the zip from
-[a release](https://github.com/iustin94/gitdiffgraf-public/releases) through ⚙ → Install Plugin from Disk.
+Settings → Plugins → Marketplace → **GitDiffGraph** → Install.
 
 ### Activate a license
 

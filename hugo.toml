@@ -8,11 +8,9 @@ disableKinds = ["taxonomy", "term", "rss"]
 [params]
   description = "Your uncommitted change, drawn as the graph of the C# types it touches."
   marketplaceUrl = "https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph"
-  releasesUrl = "https://github.com/iustin94/gitdiffgraf-public/releases"
   issuesUrl = "https://github.com/iustin94/gitdiffgraf-public/issues"
   newIssueUrl = "https://github.com/iustin94/gitdiffgraf-public/issues/new"
-  vendor = "esio"
-  vendorUrl = "https://esio.dk"
+  vendor = "Iustinian Olaru"
   contactEmail = "io@esio.dk"
 
   [params.navbar]
@@ -30,7 +28,7 @@ disableKinds = ["taxonomy", "term", "rss"]
 
   [params.theme]
     default = "light"
-    displayToggle = true
+    displayToggle = false
 
 [[menu.main]]
   name = "Docs"
@@ -41,11 +39,6 @@ disableKinds = ["taxonomy", "term", "rss"]
   name = "Changelog"
   pageRef = "/changelog"
   weight = 2
-
-[[menu.main]]
-  name = "EULA"
-  pageRef = "/eula"
-  weight = 3
 
 [[menu.main]]
   name = "Issues"
@@ -59,11 +52,80 @@ disableKinds = ["taxonomy", "term", "rss"]
     type = "search"
 
 [[menu.main]]
-  name = "GitHub"
-  url = "https://github.com/iustin94/gitdiffgraf-public"
+  name = "Theme"
   weight = 6
   [menu.main.params]
-    icon = "github"
+    type = "theme-toggle"
+
+[[menu.footer]]
+  name = "Overview"
+  pageRef = "/"
+  weight = 1
+  [menu.footer.params]
+    group = "Product"
+
+[[menu.footer]]
+  name = "Changelog"
+  pageRef = "/changelog"
+  weight = 2
+  [menu.footer.params]
+    group = "Product"
+
+[[menu.footer]]
+  name = "JetBrains Marketplace"
+  url = "https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph"
+  weight = 3
+  [menu.footer.params]
+    group = "Product"
+
+[[menu.footer]]
+  name = "Getting started"
+  pageRef = "/docs/getting-started"
+  weight = 5
+  [menu.footer.params]
+    group = "Documentation"
+
+[[menu.footer]]
+  name = "How it works"
+  pageRef = "/docs/how-it-works"
+  weight = 6
+  [menu.footer.params]
+    group = "Documentation"
+
+[[menu.footer]]
+  name = "Features"
+  pageRef = "/docs/features"
+  weight = 7
+  [menu.footer.params]
+    group = "Documentation"
+
+[[menu.footer]]
+  name = "Report an issue"
+  url = "https://github.com/iustin94/gitdiffgraf-public/issues/new"
+  weight = 8
+  [menu.footer.params]
+    group = "Support"
+
+[[menu.footer]]
+  name = "Open issues"
+  url = "https://github.com/iustin94/gitdiffgraf-public/issues"
+  weight = 9
+  [menu.footer.params]
+    group = "Support"
+
+[[menu.footer]]
+  name = "GitHub"
+  url = "https://github.com/iustin94/gitdiffgraf-public"
+  weight = 10
+  [menu.footer.params]
+    group = "Support"
+
+[[menu.footer]]
+  name = "EULA"
+  pageRef = "/eula"
+  weight = 11
+  [menu.footer.params]
+    group = "Legal"
 
 [markup.goldmark.renderer]
   unsafe = true

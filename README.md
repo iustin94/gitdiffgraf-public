@@ -2,8 +2,8 @@
 
 The public page for the [Diff Graph](https://plugins.jetbrains.com/plugin/io.github.iustin94.gitdiffgraph) Rider
 plugin: what it does, screenshots, install steps, the [EULA](content/eula.md) and the changelog. The plugin's source is
-not here; release zips are attached to [Releases](https://github.com/iustin94/gitdiffgraf-public/releases) and bugs go
-to [Issues](https://github.com/iustin94/gitdiffgraf-public/issues).
+not here; the plugin is installed from JetBrains Marketplace, and bugs go to
+[Issues](https://github.com/iustin94/gitdiffgraf-public/issues).
 
 ## Site
 
@@ -17,11 +17,14 @@ hugo --minify        # ./public
 
 | To change | Edit |
 |---|---|
-| Navbar (Docs, Changelog, EULA, Issues, GitHub), Marketplace / releases / issues links | `hugo.toml` `[menu.main]`, `[params]` |
-| Footer line (copyright, issue and release links) | `i18n/en.yaml` `copyright` |
-| Hero, feature cards, the Features list, the issue callout | `content/_index.md` |
-| Styling of the Features list | `assets/css/custom.css` (Hextra loads it after its own CSS) |
-| Screenshots | `static/images/screenshots/`, referenced by `content/_index.md` and `content/docs/how-it-works.md` |
+| Navbar (Docs, Changelog, Issues, search, theme toggle), Marketplace and issues links | `hugo.toml` `[menu.main]`, `[params]` |
+| Footer links, in groups (Product, Documentation, Support, Legal) | `hugo.toml` `[menu.footer]`, drawn by `layouts/_partials/custom/footer.html` |
+| Footer copyright line | `i18n/en.yaml` `copyright` |
+| Hero (title, the two videos and their toggle), use cases, the feature card show, how to use it, technical details, the issue callout | `content/_index.md` |
+| The hero videos, the feature pictures and their scripts | `static/videos/`, `static/images/features/`, `static/js/` |
+| The full feature list | `content/docs/features.md` |
+| Styling of the product page and the footer links | `assets/css/custom.css` (Hextra loads it after its own CSS) |
+| Screenshots | `static/images/screenshots/`, referenced by `content/docs/how-it-works.md` |
 | Getting started | `content/docs/getting-started.md` |
 | How it works, limits | `content/docs/how-it-works.md` |
 | EULA, changelog | `content/eula.md`, `content/changelog.md` |
