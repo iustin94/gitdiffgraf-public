@@ -1,5 +1,6 @@
 ---
 title: "Documentation"
+description: "Install GitDiffGraph in Rider, learn how the analysis works and see every feature of the graph."
 ---
 
 GitDiffGraph adds a tool window to Rider that draws a C# code change as the graph of the types it touches.

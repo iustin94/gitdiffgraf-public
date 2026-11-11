@@ -1,5 +1,6 @@
 ---
 title: "How it works"
+description: "How GitDiffGraph reads both sides of a change with Roslyn, compares the two graphs of types, and where its limits are."
 weight: 2
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Getting started"
+description: "Install GitDiffGraph from JetBrains Marketplace, open the graph in Rider and review a first change."
 weight: 1
 ---
 

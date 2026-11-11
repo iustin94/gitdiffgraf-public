@@ -1,5 +1,7 @@
 <meta name="author" content="{{ site.Params.vendor }}">
 <link rel="author" href="{{ site.Params.vendorUrl }}">
+{{- $picturePath := index site.Params.images 0 -}}
+{{- $picture := absURL $picturePath -}}
 {{- $author := dict "@type" "Person" "name" site.Params.vendor "url" site.Params.vendorUrl "sameAs" (slice site.Params.vendorGitHubUrl) -}}
-{{- $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" "GitDiffGraph" "applicationCategory" "DeveloperApplication" "operatingSystem" "Windows, macOS, Linux" "url" site.BaseURL "author" $author }}
+{{- $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" "GitDiffGraph" "description" site.Params.description "applicationCategory" "DeveloperApplication" "operatingSystem" "Windows, macOS, Linux" "url" site.BaseURL "downloadUrl" site.Params.marketplaceUrl "image" $picture "author" $author }}
 <script type="application/ld+json">{{ $software | jsonify | safeJS }}</script>

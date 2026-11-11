@@ -1,0 +1,26 @@
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+GitDiffGraph is a paid plugin for JetBrains Rider, sold on JetBrains Marketplace. It analyses C# solutions with Roslyn on the user's machine and records no telemetry. It is built by {{ site.Params.vendor }} ({{ site.Params.vendorUrl }}).
+
+## Product
+
+- [Overview]({{ site.Home.Permalink }}): {{ site.Home.Description }}
+- [JetBrains Marketplace listing]({{ site.Params.marketplaceUrl }}): Install the plugin.
+{{- with site.GetPage "/changelog" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{ range where site.Sections "Params.llms" "ne" false }}
+## {{ .Title }}
+{{ range where .RegularPages "Params.llms" "ne" false }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{ end }}
+## Optional
+{{ range where (where site.RegularPages "Section" "") "Params.llms" "ne" false }}
+{{- if ne .RelPermalink "/changelog/" }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{- end }}
+{{- end }}
+- [Issue tracker]({{ site.Params.issuesUrl }}): Bug reports and suggestions.

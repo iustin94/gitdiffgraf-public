@@ -1,5 +1,6 @@
 ---
 title: "Features"
+description: "Every feature of GitDiffGraph: choosing what is compared, reading the graph, opening diffs, searching and staging."
 weight: 3
 ---
 

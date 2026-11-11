@@ -1,5 +1,6 @@
 ---
-title: "Diff Graph for Rider"
+title: "GitDiffGraph for Rider: C# code changes as a graph"
+description: "GitDiffGraph is a Rider plugin that draws a C# code change as a graph: which types changed, in what order they build on each other, and how they connect across projects."
 layout: hextra-home
 ---
 
