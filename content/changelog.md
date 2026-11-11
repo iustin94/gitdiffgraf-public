@@ -26,6 +26,9 @@ description: "What changed in each release of GitDiffGraph for Rider."
 
 - The graph follows Rider's theme, light or dark, and switches with it; it followed the system's colour scheme, so
   a light Rider could show a dark graph.
+- A dependency's side pane shows its changes as a type's side pane does: only the hunks that hold the dependency's
+  lines, with added and removed lines marked and the dependency's own lines outlined; it showed every overlapping
+  hunk's whole before and after text side by side.
 
 ## 2026.1.0
 
